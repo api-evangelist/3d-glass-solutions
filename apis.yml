@@ -1,16 +1,29 @@
 aid: 3d-glass-solutions
 name: 3D Glass Solutions
-description: '3D Glass Solutions is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: '3D Glass Solutions (3DGS) is a US-based pure-play glass foundry in Albuquerque,
+  New Mexico that manufactures photo-definable glass-ceramic substrates for advanced
+  semiconductor packaging. Its patented APEX Glass material supports through-glass vias
+  (TGV), high-density interconnect, integrated passive devices, RF substrates, micro-cavities
+  and 3D heterogeneous integration for wireless communications, aerospace and defense,
+  photonics, HPC/AI and sensor markets. The company sells wafer processing, custom fabrication
+  and design-enablement services — including process design kits (PDKs) delivered through
+  EDA partners such as the AWR software group — rather than software, and publishes no
+  public API, SDK, developer portal or machine-readable specification.'
 url: https://raw.githubusercontent.com/api-evangelist/3d-glass-solutions/refs/heads/main/apis.yml
+image: http://static1.squarespace.com/static/65e8b2455ebce721208a3f82/t/66160e433996332e807c5c47/1712721475580/Final+1+%281%29.png?format=1500w
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-05'
 modified: '2026-08-05'
 tags:
+- Semiconductors
+- Advanced Packaging
+- Glass Substrates
+- RF Components
+- Photonics
+- Manufacturing
+- Hardware
 - Company
 apis: []
 maintainers:
@@ -19,5 +32,41 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/3d-glass-solutions-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.3dgsinc.com/
+- type: Blog
+  url: https://www.3dgsinc.com/blogs
+- type: PrivacyPolicy
+  url: https://www.3dgsinc.com/privacy-policy
+- type: TermsOfService
+  url: https://www.3dgsinc.com/supplier-terms-and-conditions
+- type: ContactUs
+  url: https://www.3dgsinc.com/contact-us
+- type: LinkedIn
+  url: https://www.linkedin.com/company/3dgsinc
+x-enrichment:
+  date: '2026-08-05'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: 3DGS is a glass-substrate semiconductor foundry whose only "design enablement"
+    surface is an EDA process design kit handed off to the AWR software group — the
+    site has no developer, API or documentation section at all, and every spec and
+    .well-known discovery path on 3dgsinc.com returns the Squarespace 404.
+  evidence:
+  - url: https://3dgsinc.com/openapi.json
+    status: 404
+  - url: https://3dgsinc.com/.well-known/api-catalog
+    status: 404
+  - url: https://3dgsinc.com/.well-known/agent-card.json
+    status: 404
+  - url: https://3dgsinc.com/llms.txt
+    status: 404
+  - url: https://www.3dgsinc.com/process-design-kit
+    status: 200
+  checked: '2026-08-05'
